@@ -1,0 +1,34 @@
+{
+  "name": "leading/lib",
+  "description": "基础封装功能",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "jonathan",
+      "email": "zjonathan@aliyun.com"
+    }
+  ],
+  "require": {
+    "php": "^7.2.5",
+    "laravel/framework": "^7.0",
+    "laravel/sanctum": "^2.1"
+  },
+  "require-dev": {},
+  "autoload": {
+    "psr-4": {
+      "Leading\\Lib\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Leading\\Lib\\Providers\\LibServiceProvider"
+      ]
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

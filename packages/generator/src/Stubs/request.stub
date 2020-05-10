@@ -1,0 +1,43 @@
+<?php
+
+namespace $classNamespace$;
+
+use Leading\Lib\Http\ApiRequest;
+
+/**
+ * Class $className$
+ * @package $classNamespace$
+ */
+class $className$ extends ApiRequest
+{
+
+    /**
+     * Get custom rules for validator
+
+     * @return array
+     */
+    public function rules()
+    {
+        return [];
+    }
+
+    /**
+     * Get custom attributes for validator errors.
+     *
+     * @return array
+     */
+    public function attributes()
+    {
+        return [];
+    }
+
+    /**
+     * Get custom messages for validator errors.
+     *
+     * @return array
+     */
+    public function messages()
+    {
+        return [];
+    }
+}

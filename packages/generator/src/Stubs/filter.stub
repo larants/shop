@@ -1,0 +1,14 @@
+<?php
+
+namespace $classNamespace$;
+
+use Leading\Lib\Eloquent\Filter;
+
+/**
+ * Class $className$
+ * @package $classNamespace$
+ */
+class $className$ extends Filter
+{
+
+}

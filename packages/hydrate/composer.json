@@ -1,0 +1,34 @@
+{
+  "name": "leading/hydrate",
+  "description": "entity 基础分装",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "jonathan",
+      "email": "zjonathan@aliyun.com"
+    }
+  ],
+  "require": {
+    "php": "^7.1.3",
+    "doctrine/annotations": "^1.10",
+    "laravel/framework": "^7.0"
+  },
+  "require-dev": {},
+  "autoload": {
+    "psr-4": {
+      "Leading\\Hydrate\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Leading\\Hydrate\\HydrateServiceProvider"
+      ]
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

@@ -1,0 +1,89 @@
+<?php
+
+namespace $classNamespace$;
+
+use $requestClassNamespace$\$requestClassName$;
+use $repositoryClassNamespace$\$repositoryClassName$;
+use Leading\Lib\Routing\ApiController;
+
+/**
+ * Class $className$
+ * @package $classNamespace$
+ */
+class $className$ extends ApiController
+{
+
+    /**
+     * @var $repositoryClassName$
+     */
+    protected $repository;
+
+    /**
+     * $className$ constructor.
+     * @param $repositoryClassName$ $repository
+     */
+    public function __construct($repositoryClassName$ $repository)
+    {
+        $this->repository = $repository;
+    }
+
+    /**
+     *
+     * @param Request $request
+     * @return Response
+     */
+    public function index(Request $request)
+    {
+        $$pluralName$ = $this->repository->paginate($request->query('limit'));
+
+        return $this->response->toPaginator($$pluralName$);
+    }
+
+    /**
+     * @param $id
+     * @return Response
+     */
+    public function show($id)
+    {
+        $this->repository->setSkipFilters(true);
+        $$singularName$ = $this->repository->find($id);
+
+        return $this->response->toItem($$singularName$);
+    }
+
+
+    /**
+     * @param $requestClassName$ $request
+     * @return Response
+     */
+    public function store($requestClassName$ $request)
+    {
+        $$singularName$ = $this->repository->create($request->all());
+
+        return $this->response->toItem($$singularName$)->setStatusCode(201);
+    }
+
+
+    /**
+     * @param $requestClassName$ $request
+     * @param $id
+     * @return Response
+     */
+    public function update($requestClassName$ $request, $id)
+    {
+        $$singularName$ = $this->repository->update($request->all(), $id);
+
+        return $this->response->toItem($$singularName$);
+    }
+
+    /**
+     * @param $id
+     * @return Response
+     */
+    public function destroy($id)
+    {
+        $this->repository->delete($id);
+
+        return $this->response->noContent();
+    }
+}

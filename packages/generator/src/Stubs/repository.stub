@@ -1,0 +1,24 @@
+<?php
+
+namespace $classNamespace$;
+
+use $modelClassNamespace$\$modelClassName$;
+use Leading\Lib\Eloquent\Repository;
+
+/**
+ * Class $className$
+ * @package $classNamespace$
+ */
+class $className$ extends BaseRepository
+{
+
+    /**
+     * @return $modelClassName$
+     */
+    public function newModel()
+    {
+        $model = new $modelClassName$;
+
+        return $this->model = $model;
+    }
+}

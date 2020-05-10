@@ -1,0 +1,20 @@
+<?php
+
+namespace $classNamespace$;
+
+use Leading\Hydrate\MapAnnotation;
+use Leading\Hydrate\Entity;
+
+/**
+ * Class $className$
+ * @package $classNamespace$;
+ */
+class $className$ extends Entity
+{
+
+    /**
+     * @MapAnnotation(name="Id")
+     * @var
+     */
+    public $id;
+}
